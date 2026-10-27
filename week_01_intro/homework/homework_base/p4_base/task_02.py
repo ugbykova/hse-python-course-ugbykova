@@ -10,8 +10,10 @@
 """
 
 def main():
-    # TODO: реализовать
-    pass
+    name = input("Введите имя: ")
+    age = int(input("Введите возраст: "))
+    city = input("Введите город: ")
+    print(f'{name}, {age} лет, {city}.')
 
 
 if __name__ == "__main__":

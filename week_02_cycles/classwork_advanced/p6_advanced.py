@@ -211,8 +211,8 @@ def task_3_6(n: float) -> str:
 
 def task_3_7(n: int) -> str:
     """Вернуть 'even' или 'odd' через тернарный оператор."""
-    # TODO: реализовать
-    pass
+    n = int(input())
+    print("even" if n % 2 == 0 else "odd")
 
 
 # ------------------------------------------------------------
@@ -222,8 +222,10 @@ def task_3_7(n: int) -> str:
 
 def task_3_8(a: int, b: int, c: int) -> int:
     """Вернуть максимум из трёх через тернарный оператор."""
-    # TODO: реализовать
-    pass
+    a = int(input())
+    b = int(input())
+    c = int(input())
+    m = a if a > b and a > c else (b if b > c and b > a else c)
 
 
 # ------------------------------------------------------------
@@ -234,8 +236,7 @@ def task_3_8(a: int, b: int, c: int) -> int:
 
 def task_3_9() -> int:
     """Вернуть номер правильного варианта."""
-    # TODO: реализовать
-    pass
+    
 
 
 # ============================================================
@@ -256,8 +257,7 @@ def task_3_9() -> int:
 
 def task_4_4(x: int) -> str:
     """Вернуть строку по логике задачи."""
-    # TODO: реализовать
-    pass
+    print("positive even")
 
 
 # ------------------------------------------------------------
@@ -267,8 +267,9 @@ def task_4_4(x: int) -> str:
 
 def task_4_5(x: int) -> str:
     """То же, что 4.4, но без вложенных if."""
-    # TODO: реализовать
-    pass
+    x = 12
+    "positive even" if x > 0 and x % 2 == 0 else ("positive odd" if x > 0 else "non-positive")
+    
 
 
 # ------------------------------------------------------------
@@ -279,9 +280,11 @@ def task_4_5(x: int) -> str:
 
 def task_4_6(x: int) -> str:
     """Вернуть описание числа по логике задачи."""
-    # TODO: реализовать
-    pass
-
+    x = int(input())
+    if x > 0:
+        "positive even" if x % 2 == 0 else "positive odd"
+    else: 
+        "negative devided by 3" if x % 2 == 0 else "negative not devided by 3"
 
 # ------------------------------------------------------------
 # Задача 4.7 (уровень 3). Выбор
@@ -291,8 +294,7 @@ def task_4_6(x: int) -> str:
 
 def task_4_7() -> int:
     """Вернуть номер правильного варианта."""
-    # TODO: реализовать
-    pass
+    print("2")
 
 
 # ------------------------------------------------------------
@@ -302,8 +304,13 @@ def task_4_7() -> int:
 
 def task_4_8(a: int, b: int, c: int) -> str:
     """Вернуть 'equilateral', 'isosceles' или 'scalene'."""
-    # TODO: реализовать
-    pass
+    if a == b == c: 
+        kind = "equilateral"
+    elif a == b or b == c or a == c: 
+        kind = "isosceles"
+    else: 
+        kind = "scalene"
+    return kind
 
 
 # ------------------------------------------------------------
@@ -314,8 +321,12 @@ def task_4_8(a: int, b: int, c: int) -> str:
 
 def task_4_9(login: str, password: str) -> str:
     """Вернуть 'ok' или 'fail'."""
-    # TODO: реализовать
-    pass
+    if len(login) > 0 and len(password) > 6:
+        for s in password.isdigit():
+            return "ok"
+    else:
+        return "fail"
+    
 
 
 # ============================================================

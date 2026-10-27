@@ -25,8 +25,15 @@
 
 def min_coins(amount: int, coins: list) -> int:
     """Вернуть минимальное число монет или -1, если нельзя."""
-    # TODO: реализовать
-    raise NotImplementedError
+    coins.sort(reverse=True)
+    count = 0
+    for coin in coins:
+        while amount >= coin:
+                amount -= coin 
+                count += 1
+    if amount != 0:
+        return -1 
+    return count
 
 
 # ============================================================
@@ -49,8 +56,14 @@ def min_coins(amount: int, coins: list) -> int:
 
 def max_intervals(intervals: list) -> int:
     """Вернуть максимальное число непересекающихся интервалов."""
-    # TODO: реализовать
-    raise NotImplementedError
+    intervals.sort(key=lambda x: x[1])
+    count = 0
+    last_end = float("-inf")
+    for start, end in intervals:
+        if start > last_end:
+            count += 1 
+            last_end = end 
+    return count
 
 
 # ============================================================
@@ -74,8 +87,16 @@ def fractional_knapsack(capacity: float, items: list) -> float:
     items: список кортежей (weight, value).
     Вернуть максимальную суммарную стоимость.
     """
-    # TODO: реализовать
-    raise NotImplementedError
+    items.sort(key=lambda x: x[1] / x[0], reverse=True)
+    total = 0.0
+    for weight, value in items:
+        if capacity >= weight:
+            total += value
+            capacity -= weight 
+        else:
+            total += value * (capacity / weight)
+            capacity = 0   
+    return total
 
 
 # ============================================================
@@ -103,8 +124,15 @@ def fractional_knapsack(capacity: float, items: list) -> float:
 
 def min_platforms(arrivals: list, departures: list) -> int:
     """Вернуть минимальное число платформ."""
-    # TODO: реализовать
-    raise NotImplementedError
+    events = [(t, 1) for t in arrivals] + [(t, -1) for t in departures]
+    events.sort()
+    current = 0
+    best = 0
+    for _, delta in events:
+        current += delta 
+        if current > best:
+            best = current
+    return best
 
 
 # ============================================================

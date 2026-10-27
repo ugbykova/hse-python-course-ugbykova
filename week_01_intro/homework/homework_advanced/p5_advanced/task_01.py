@@ -15,9 +15,16 @@
 """
 
 def fractional_knapsack(capacity: float, items: list) -> float:
-    # TODO: реализовать
-    pass
-
+    items.sort(key=lambda x: x[1] / x[0], reverse=True)
+    total = 0.0
+    for weight, value in items:
+        if capacity >= weight:
+            capacity -= weight
+            total += value
+        else:
+            total += value * (capacity / weight)
+            capacity = 0
+    return total
 
 if __name__ == "__main__":
     items = [(10, 60), (20, 100), (30, 120)]

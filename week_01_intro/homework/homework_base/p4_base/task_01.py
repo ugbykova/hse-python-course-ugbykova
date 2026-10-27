@@ -10,8 +10,11 @@
 """
 
 def main():
-    # TODO: реализовать
-    pass
+    l = 12
+    w = 5 
+    S = l * w
+    P = (l + w) * 2
+    print(S, P)
 
 
 if __name__ == "__main__":

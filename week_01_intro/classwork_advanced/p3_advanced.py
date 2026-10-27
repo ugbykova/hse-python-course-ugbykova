@@ -40,8 +40,12 @@ def has_duplicates_fast(nums: list) -> bool:
     Подсказка: используйте set для хранения уже встреченных чисел.
     Ожидаемая сложность: O(n) по времени, O(n) по памяти.
     """
-    # TODO: реализовать
-    raise NotImplementedError
+    seen = set()
+    for x in nums:
+        if x in seen:
+            return True
+        seen.add(x)
+    return False
 
 
 # ============================================================
@@ -74,23 +78,22 @@ def has_duplicates_fast(nums: list) -> bool:
 #           pass
 
 def complexity_a() -> str:
-    # TODO
-    raise NotImplementedError
+    answer = "O(n)"
+    return answer 
 
 
 def complexity_b() -> str:
-    # TODO
-    raise NotImplementedError
+    answer = "O(n^2)"
+    return answer 
 
 
 def complexity_c() -> str:
-    # TODO
-    raise NotImplementedError
-
+    answer = "O(log n)"
+    return answer
 
 def complexity_d() -> str:
-    # TODO
-    raise NotImplementedError
+    answer = "O(n^2)"
+    return answer
 
 
 # ============================================================

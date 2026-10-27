@@ -19,8 +19,9 @@ from decimal import Decimal, ROUND_HALF_UP
 
 
 def total(price: str, qty: int, tax: str) -> str:
-    # TODO: реализовать
-    pass
+    total = Decimal(price) * qty * (1 + Decimal(tax) / 100)
+    res = total.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
+    return f'Overall: {res}'
 
 
 if __name__ == "__main__":

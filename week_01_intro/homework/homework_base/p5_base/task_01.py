@@ -25,7 +25,11 @@
 def min_coins(amount: int) -> int:
     coins = [50, 10, 5, 1]
     count = 0
-    # TODO: реализовать жадный размен
+    coins.sort(reverse=True)
+    for coin in coins:
+        while amount >= coin:
+            amount -= coin 
+            count += 1
     return count
 
 

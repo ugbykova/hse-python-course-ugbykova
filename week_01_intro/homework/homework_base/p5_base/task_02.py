@@ -26,11 +26,14 @@
 """
 
 def max_intervals(intervals: list) -> int:
-    count = 0
     last_end = float("-inf")
-    # TODO: отсортировать и пройтись по интервалам
+    intervals.sort(key=lambda x: x[1])
+    count = 0 
+    for start, end in intervals:
+        if start > last_end:
+            count += 1
+            last_end = end
     return count
-
 
 if __name__ == "__main__":
     data = [(1,4),(3,5),(0,6),(5,7),(3,9),(5,9),(6,10),(8,11)]

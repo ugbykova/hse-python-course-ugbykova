@@ -9,6 +9,8 @@
 import math
 import re
 
+from week_02_cycles.homework.homework_base.p7_task5 import total
+
 
 # ============================================================
 # Тема 1. Операторы сравнения
@@ -240,8 +242,13 @@ def task_3_4():
 #     discount = 0.0
 
 def task_3_5():
-    # TODO: реализовать
-    pass
+     total = float(input())
+if total > 5000:
+        discount = 0.20
+elif total > 1000:
+        discount = 0.10
+else:
+        discount = 0.0
 
 
 # ------------------------------------------------------------
@@ -250,9 +257,13 @@ def task_3_5():
 # Запросите число и выведите "positive", "negative" или "zero".
 
 def task_3_6():
-    # TODO: реализовать
-    pass
-
+    n = float(input())
+    if n > 0:
+        print("positive")
+    elif n < 0:
+        print("negative")
+    else:
+        print("zero")
 
 # ============================================================
 # Тема 4. Вложенные условия
@@ -269,8 +280,12 @@ def task_3_6():
 #         print("b <= a")
 
 def task_4_1():
-    # TODO: реализовать
-    pass
+    a, b = 3, 7
+    if a > 0:
+        if b > a:
+            print("b > a")
+        else:
+            print("b <= a")
 
 
 # ------------------------------------------------------------
@@ -283,8 +298,10 @@ def task_4_1():
 #     ???
 
 def task_4_2():
-    # TODO: реализовать
-    pass
+    age = 20
+    license = True
+    if age >= 18:
+        
 
 
 # ------------------------------------------------------------
