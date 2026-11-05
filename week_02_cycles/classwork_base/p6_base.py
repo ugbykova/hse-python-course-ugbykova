@@ -23,8 +23,8 @@ from week_02_cycles.homework.homework_base.p7_task5 import total
 # Запишите вывод в комментарии ниже.
 
 def task_1_1():
-    # TODO: реализовать
-    pass
+    print(2 + 2 == 4, 2 * 2 != 4)
+    
 
 
 # ------------------------------------------------------------
@@ -35,8 +35,9 @@ def task_1_1():
 # ok = ???  # -> true
 
 def task_1_2():
-    # TODO: реализовать
-    pass
+    x = 42
+    ok = True if x > 0 else False
+    print(ok)
 
 
 # ------------------------------------------------------------
@@ -48,8 +49,9 @@ def task_1_2():
 # Что не так и как исправить?
 
 def task_1_3():
-    # TODO: реализовать
-    pass
+    x = 5
+    if x == 5:
+        print("five")
 
 
 # ------------------------------------------------------------
@@ -60,8 +62,9 @@ def task_1_3():
 # ok = ???  # -> true
 
 def task_1_4():
-    # TODO: реализовать
-    pass
+    x = 42 
+    ok = True if 100 >= x >= 0 else False
+    print(ok)
 
 
 # ------------------------------------------------------------
@@ -76,8 +79,7 @@ def task_1_4():
 # 4. True False
 
 def task_1_5():
-    # TODO: реализовать
-    pass
+    print('3. False False')
 
 
 # ------------------------------------------------------------
@@ -86,8 +88,9 @@ def task_1_5():
 # Запросите возраст и выведите True, если он от 18 до 65 включительно.
 
 def task_1_6():
-    # TODO: реализовать
-    pass
+    age = int(input())
+    n = True if 65 >= age >= 18 else False
+    print(n)
 
 
 # ============================================================
@@ -100,8 +103,7 @@ def task_1_6():
 # print(not True or True and False)
 
 def task_2_1():
-    # TODO: реализовать
-    pass
+    print(not True or True and False)
 
 
 # ------------------------------------------------------------
@@ -112,8 +114,9 @@ def task_2_1():
 # ok = ???  # -> true
 
 def task_2_2():
-    # TODO: реализовать
-    pass
+    x = 8 
+    ok = True if x > 0 and x % 2 == 0 else False
+    print(ok)
 
 
 # ------------------------------------------------------------
@@ -126,8 +129,7 @@ def task_2_2():
 # 4. a == True
 
 def task_2_3():
-    # TODO: реализовать
-    pass
+    print("3. not a")
 
 
 # ------------------------------------------------------------
@@ -138,8 +140,9 @@ def task_2_3():
 # leap = ???
 
 def task_2_4():
-    # TODO: реализовать
-    pass
+    year = 2024
+    leap = "високосный год" if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0) else "невисокосный год"
+    print(leap)
 
 
 # ------------------------------------------------------------
@@ -151,8 +154,9 @@ def task_2_4():
 # Условие всегда истинно. Как исправить?
 
 def task_2_5():
-    # TODO: реализовать
-    pass
+    x = 5 
+    if x > 0 and x < 10:
+        print("ok") 
 
 
 # ------------------------------------------------------------
@@ -162,8 +166,9 @@ def task_2_5():
 # и содержит "!".
 
 def task_2_6():
-    # TODO: реализовать
-    pass
+    password = input()
+    check = len(password) > 8 and "!" in password 
+    print(check)
 
 
 # ============================================================
@@ -182,8 +187,13 @@ def task_2_6():
 #     print("small")
 
 def task_3_1():
-    # TODO: реализовать
-    pass
+    x = 5
+    if x > 10:
+        print("big")
+    elif x > 3:
+        print("medium")
+    else:
+        print("small")
 
 
 # ------------------------------------------------------------
@@ -194,8 +204,8 @@ def task_3_1():
 # print(???)
 
 def task_3_2():
-    # TODO: реализовать
-    pass
+    n = 9 
+    print("yes" if n % 3 == 0 else "no")
 
 
 # ------------------------------------------------------------
@@ -207,8 +217,11 @@ def task_3_2():
 # print("negative")
 
 def task_3_3():
-    # TODO: реализовать
-    pass
+    x = int(input())
+    if x > 0:
+        print("positive")
+    else:
+        print("negative")
 
 
 # ------------------------------------------------------------
@@ -225,8 +238,15 @@ def task_3_3():
 #     print("4")
 
 def task_3_4():
-    # TODO: реализовать
-    pass
+    a, b = 5, 10
+    if a > b:
+        print("1")
+    elif a == b:
+        print("2")
+    elif a < b:
+        print("3")
+    else:
+        print("4")
 
 
 # ------------------------------------------------------------
@@ -301,7 +321,7 @@ def task_4_2():
     age = 20
     license = True
     if age >= 18:
-        
+        print(license)
 
 
 # ------------------------------------------------------------
@@ -312,8 +332,11 @@ def task_4_2():
 #     print("both positive")
 
 def task_4_3():
-    # TODO: реализовать
-    pass
+    a = int(input())
+    b = int(input()) 
+    if a > 0:
+        if b > 0:
+            print("both positive")
 
 
 # ------------------------------------------------------------
@@ -329,8 +352,14 @@ def task_4_3():
 #     print("non-positive")
 
 def task_4_4():
-    # TODO: реализовать
-    pass
+    x = 12
+    if x > 0:
+        if x % 2 == 0:
+            print("positive even")
+        else:
+            print("positive odd")
+    else:
+        print("non-positive")
 
 
 # ------------------------------------------------------------
